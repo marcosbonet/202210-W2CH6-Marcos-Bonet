@@ -229,25 +229,25 @@ let showBestPrices = () => {
             userResponse +
             '€'
     );
-    for (let i = 0; i < bestPrices.length; i++) {
-        if (bestPrices[i].scale === false) {
+    for (let bestPrice of bestPrices) {
+        if (bestPrice.scale === false) {
             console.log(
                 'El vuelo con origen: ' +
-                    bestPrices[i].from +
+                    bestPrice.from +
                     ' y destino: ' +
-                    bestPrices[i].to +
+                    bestPrice.to +
                     ', tiene un coste de ' +
-                    bestPrices[i].cost +
+                    bestPrice.cost +
                     '€ y no realiza ninguna escala.'
             );
         } else {
             console.log(
                 'El vuelo con origen: ' +
-                    bestPrices[i].from +
+                    bestPrice.from +
                     ' y destino: ' +
-                    bestPrices[i].to +
+                    bestPrice.to +
                     ', tiene un coste de ' +
-                    bestPrices[i].cost +
+                    bestPrice.cost +
                     '€ y realiza escala.'
             );
         }
